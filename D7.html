@@ -173,20 +173,53 @@
              Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
             */
 
-      const makeItClickable = function () {};
+      const makeItClickable = function () {
+        const h1 = document.getElementsByTagName("h1");
+        Array.from(h1).forEach((l) => {
+          l.onclick = function () {};
+        });
+      };
+
+      makeItClickable();
 
       /* ESERCIZIO 10
              Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
             */
 
-      const revealFooterLink = function () {};
+      const revealFooterLink = function () {
+        const footA = document.getElementsByTagName("footer h3");
+        console.log(footA);
+      };
+
+      revealFooterLink();
 
       /* ESERCIZIO 11
              Crea una funzione che crei una tabella nell'elemento con id "tableArea".
              La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
           */
 
-      const generateTable = function () {};
+      const generateTable = function () {
+        const divTableArea = document.getElementById("tableArea");
+        const newTable = document.createElement("table");
+        console.dir(newTable);
+        const newTr = document.createElement("tr");
+        const newTd1 = document.createElement("td");
+        const newTd2 = document.createElement("td");
+        const newTd3 = document.createElement("td");
+        const newTd4 = document.createElement("td");
+        newTd1.innerText = "immagine";
+        newTd2.innerText = "nome prodotto";
+        newTd3.innerText = "quantità";
+        newTd4.innerText = "prezzo";
+        newTr.appendChild(newTd1);
+        newTr.appendChild(newTd2);
+        newTr.appendChild(newTd3);
+        newTr.appendChild(newTd4);
+        newTable.appendChild(newTr);
+        divTableArea.appendChild(newTable);
+      };
+
+      generateTable();
 
       /* ESERCIZIO 12
              Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
