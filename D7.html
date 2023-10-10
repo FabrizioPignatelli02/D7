@@ -97,24 +97,29 @@
         h1.classList.add(classe);
       };
 
-      addClassToTitle("bella");
+      addClassToTitle("myHeading");
 
       /* ESERCIZIO 3
              Scrivi una funzione che cambi il testo dei p figli di un div
             */
 
       const changePcontent = function (newP) {
-        const allP = document.getElementsByTagName("p");
+        const allP = document.querySelectorAll("div p");
         Array.from(allP).forEach((p) => (p.innerText = newP));
       };
 
-      changePcontent("salutami");
+      changePcontent("ciao");
 
       /* ESERCIZIO 4
              Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
             */
+      const url2 = "https://www.google.com";
+      const changeUrls = function (url) {
+        const allLinks = document.querySelectorAll("div a");
+        Array.from(allLinks).forEach((a) => (a.href = url));
+      };
 
-      const changeUrls = function () {};
+      changeUrls(url2);
 
       /* ESERCIZIO 5
              Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
