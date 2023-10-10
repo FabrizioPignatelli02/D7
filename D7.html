@@ -225,7 +225,26 @@
              Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
           */
 
-      const addRow = function () {};
+      // const addRow = function (img, name, qnt, cost) {
+      //   const table = document.getElementsByTagName("table");
+      //   console.log(table);
+      //   const newTr = document.createElement("tr");
+      //   const newTd1 = document.createElement("td");
+      //   const newTd2 = document.createElement("td");
+      //   const newTd3 = document.createElement("td");
+      //   const newTd4 = document.createElement("td");
+      //   newTd1.innerText = img;
+      //   newTd2.innerText = name;
+      //   newTd3.innerText = qnt;
+      //   newTd4.innerText = cost;
+      //   newTr.appendChild(newTd1);
+      //   newTr.appendChild(newTd2);
+      //   newTr.appendChild(newTd3);
+      //   newTr.appendChild(newTd4);
+      //   table.appendChild(newTr);
+      // };
+
+      // addRow("img", "amore", "3", "20euro");
 
       /* ESERCIZIO 14
             Crea una funzione che nasconda le immagini della tabella quando eseguita
@@ -237,7 +256,16 @@
             Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
           */
 
-      const changeColorWithRandom = function () {};
+      const changeColorWithRandom = function () {
+        const h2 = document.getElementById("changeMyColor");
+        h2.onclick = function () {
+          const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+
+          h2.style.color = "#" + randomColor;
+        };
+      };
+
+      changeColorWithRandom();
 
       /* EXTRA ESERCIZIO 16
             Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
