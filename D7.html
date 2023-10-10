@@ -184,13 +184,14 @@
       /* ESERCIZIO 10
              Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
             */
-
+      const foot = document.getElementsByTagName("footer")[0];
+      const footerLink = document.querySelector("footer a").href;
       const revealFooterLink = function () {
-        const footA = document.getElementsByTagName("footer h3");
-        console.log(footA);
+        alert(footerLink);
+        console.log(foot);
       };
 
-      revealFooterLink();
+      foot.onclick = revealFooterLink;
 
       /* ESERCIZIO 11
              Crea una funzione che crei una tabella nell'elemento con id "tableArea".
